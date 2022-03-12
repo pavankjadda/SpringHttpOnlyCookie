@@ -1,0 +1,51 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      cookie:
+        secure: true
+        http-only: true
+
+  tomcat:
+    remoteip:
+      remote-ip-header: x-forwarded-for
+      protocol-header: x-forwarded-proto
+
+### Spring Properties
+spring:
+  h2:
+    console.enabled: true
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+  # PRES SQL Server datasource Properties
+  datasource:
+    url: jdbc:h2:mem:mydb;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+
+  # JPA properties
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        ddl-auto: update
+        show_sql: false
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: -1
+      max-request-size: -1
+
+  # Spring Session properties
+  session:
+    jdbc:
+      table-name: SPRING_SESSION
+      initialize-schema: always
+    timeout: 1h
+    store-type: jdbc
