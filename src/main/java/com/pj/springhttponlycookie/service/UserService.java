@@ -18,7 +18,7 @@ public interface UserService
    * @return UserDTO object
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   UserDTO loginUser(HttpServletRequest request, HttpServletResponse response);
 
@@ -28,7 +28,7 @@ public interface UserService
    * @return UserDTO object
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   UserDTO getUserDetails(HttpServletRequest request, HttpServletResponse response);
 

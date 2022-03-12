@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * Exposes API end points for User and related operations
  *
  * @author Pavan Kumar Jadda
- * @since 2.0.0
+ * @since 1.0.0
  */
 @RestController
 @RequestMapping("/api/v1/user")
@@ -37,7 +37,7 @@ public class UserController
    * @return UserDTO object
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @GetMapping("/find/username/{username}")
   public UserProfileDTO findUserByUsername(@PathVariable String username)
@@ -54,7 +54,7 @@ public class UserController
    * @return UserDTO object
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @GetMapping(value = {"/authenticate", "/login"})
   public UserDTO loginUser(HttpServletRequest request, HttpServletResponse response)
@@ -68,7 +68,7 @@ public class UserController
    * @return UserDTO object
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @GetMapping(value = {"/home"})
   public UserDTO getUserDetails(HttpServletRequest request, HttpServletResponse response)
@@ -83,7 +83,7 @@ public class UserController
    * @return Returns true if user logged in otherwise returns false
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @GetMapping("/is_logged_in")
   public boolean isLoggedIn()
@@ -99,7 +99,7 @@ public class UserController
    * @return status of logout request
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @GetMapping("/logout")
   public boolean logoutUser(HttpServletRequest httpServletRequest)

@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
  * Implements User business logic
  *
  * @author Pavan Kumar Jadda
- * @since 2.0.0
+ * @since 1.0.0
  */
 @Service
 @Transactional
@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService
    * @return UserDTO object
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @Override
   public UserDTO loginUser(HttpServletRequest request, HttpServletResponse response)
@@ -69,7 +69,7 @@ public class UserServiceImpl implements UserService
    * @return UserDTO object
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @Override
   public UserDTO getUserDetails(HttpServletRequest request, HttpServletResponse response)
@@ -130,7 +130,7 @@ public class UserServiceImpl implements UserService
    * @return UTC Date Time
    *
    * @author Pavan Kumar Jdda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   public Instant convertEpochTimeToUtcTime(Long epochTime)
   {

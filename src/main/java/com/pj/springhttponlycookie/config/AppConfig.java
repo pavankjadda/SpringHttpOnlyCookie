@@ -15,7 +15,7 @@ import org.springframework.session.web.http.HttpSessionIdResolver;
  * Core application config class that defines required beans for application
  *
  * @author Pavan Kumar Jadda
- * @since 2.0.0
+ * @since 1.0.0
  */
 @Configuration
 @EnableScheduling
@@ -42,7 +42,7 @@ public class AppConfig
    * @return ModelMapper bean
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @Bean
   public ModelMapper modelMapper()
@@ -57,7 +57,7 @@ public class AppConfig
    * @return HttpSessionEventPublisher bean
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @Bean
   public HttpSessionEventPublisher httpSessionEventPublisher()
@@ -71,7 +71,7 @@ public class AppConfig
    * @return HttpSessionIdResolver bean
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   @Bean
   public HttpSessionIdResolver httpSessionIdResolver()

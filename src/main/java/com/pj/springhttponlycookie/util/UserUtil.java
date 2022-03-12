@@ -17,7 +17,7 @@ import java.util.Collections;
  * Utility class for User and related operations
  *
  * @author Pavan Kumar Jadda
- * @since 2.0.0
+ * @since 1.0.0
  */
 @Service
 public class UserUtil
@@ -35,7 +35,7 @@ public class UserUtil
    * @return logged in user username if it can be retrieved otherwise return 'System'
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   public static String getUsername()
   {
@@ -79,7 +79,7 @@ public class UserUtil
    * @return Returns true if user logged in otherwise returns false
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   public static boolean isLoggedIn()
   {
@@ -94,7 +94,7 @@ public class UserUtil
    * @return status of logout request
    *
    * @author Pavan Kumar Jadda
-   * @since 2.0.0
+   * @since 1.0.0
    */
   public static boolean logoutUser(HttpServletRequest httpServletRequest)
   {

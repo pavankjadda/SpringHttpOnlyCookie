@@ -10,12 +10,14 @@
 	</parent>
 	<groupId>com.pj</groupId>
 	<artifactId>SpringHttpOnlyCookie</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>SpringHttpOnlyCookie</name>
 	<description>SpringHttpOnlyCookie</description>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
