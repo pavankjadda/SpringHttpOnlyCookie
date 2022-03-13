@@ -28,7 +28,7 @@ public class CookieUtil
   {
     var cookie = new Cookie(name, value);
     cookie.setMaxAge(3600);
-    cookie.setHttpOnly(false);
+    cookie.setHttpOnly(true);
     cookie.setSecure(true);
     cookie.setPath("/");
     return cookie;

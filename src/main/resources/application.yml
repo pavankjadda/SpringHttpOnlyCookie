@@ -51,3 +51,8 @@ spring:
       initialize-schema: always
     timeout: 1h
     store-type: jdbc
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

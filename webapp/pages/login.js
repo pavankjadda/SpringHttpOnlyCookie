@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import styles from "../styles/Home.module.css";
 
 
 function Login()
@@ -8,7 +9,7 @@ function Login()
 
   function login()
   {
-    fetch(process.env.REACT_APP_BASE_URL + "/api/v1/user/login", {
+    fetch("/api/v1/user/login", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -22,11 +23,14 @@ function Login()
         {
           window.location.href = "/home";
         }
+      })
+      .catch(err => {
+        console.log("err:"+err.data)
       });
   }
 
   return (
-    <form>
+    <form  className={styles.main}>
       <h1>Login</h1>
       <br/>
       <label>
@@ -40,7 +44,7 @@ function Login()
       </label>
       <br/>
 
-      <button onClick={login}>Login</button>
+      <button onClick={login} type="button">Login</button>
 
     </form>
   );
