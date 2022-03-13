@@ -15,16 +15,18 @@ server:
 spring:
   h2:
     console.enabled: true
+    console:
+      path: /h2-console
   jackson:
     serialization:
       FAIL_ON_EMPTY_BEANS: false
 
   # PRES SQL Server datasource Properties
   datasource:
-    url: jdbc:h2:mem:mydb;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: password
-    driver-class-name: org.h2.Driver
+    url: jdbc:mysql://localhost:33061/demo_schema
+    username: root
+    password: test12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   # JPA properties
   jpa:

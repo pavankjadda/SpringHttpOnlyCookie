@@ -105,7 +105,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
   {
     http.authorizeRequests()
       .antMatchers("/", "/login", "/api/v1/actuator/**", "/api/v1/user/login",
-        "/api/v1/user/authenticate", "/api/v1/user/logout", "/api/v1/health/find/status")
+        "/api/v1/user/authenticate", "/api/v1/user/logout", "/h2-console/**")
       .permitAll()
       .and()
       .authorizeRequests().anyRequest().authenticated()

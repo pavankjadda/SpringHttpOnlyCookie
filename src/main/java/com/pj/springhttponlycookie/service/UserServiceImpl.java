@@ -57,7 +57,9 @@ public class UserServiceImpl implements UserService
   @Override
   public UserDTO loginUser(HttpServletRequest request, HttpServletResponse response)
   {
-    response.addCookie(CookieUtil.createCookie("X-Auth-Token", request.getSession(false).getId()));
+    response.addCookie(CookieUtil.createCookie("X-Auth-Token", request.getSession(false) != null
+      ? request.getSession(false).getId()
+      : request.getSession(true).getId()));
     response.addCookie(CookieUtil.createCookie("isLoggedIn", "true"));
     return getUserDetails(request, response);
   }

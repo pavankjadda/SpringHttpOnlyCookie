@@ -12,18 +12,15 @@ function Login()
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        authorization: 'Basic ' + btoa(username + ':' + password)
+        authorization: "Basic " + btoa(username + ":" + password)
       }
     })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success)
+      .then(data =>
+      {
+        console.log('data:'+data.body);
+        if (data)
         {
           window.location.href = "/home";
-        }
-        else
-        {
-          alert(data.message);
         }
       });
   }
