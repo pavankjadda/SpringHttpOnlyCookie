@@ -8,7 +8,7 @@ function Login()
 
   function login()
   {
-    fetch("/api/v1/user/login", {
+    fetch(process.env.REACT_APP_BASE_URL + "/api/v1/user/login", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -17,7 +17,7 @@ function Login()
     })
       .then(data =>
       {
-        console.log('data:'+data.body);
+        console.log("data:" + data);
         if (data)
         {
           window.location.href = "/home";
@@ -26,7 +26,7 @@ function Login()
   }
 
   return (
-    <form onSubmit={login}>
+    <form>
       <h1>Login</h1>
       <br/>
       <label>
@@ -40,7 +40,7 @@ function Login()
       </label>
       <br/>
 
-      <button>Login</button>
+      <button onClick={login}>Login</button>
 
     </form>
   );
